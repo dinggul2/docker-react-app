@@ -4,6 +4,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile.dev
+      network: host
     volumes:
       - /app/node_modules
       - ./frontend:/app
