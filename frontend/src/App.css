@@ -35,6 +35,10 @@
   width: 375px;
 }
 
+.container > li {
+  color: #f1f1f1;
+}
+
 form.example input {
   padding: 10px;
   font-size: 17px;

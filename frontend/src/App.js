@@ -38,13 +38,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-
-        {lists && lists.map((list, index) => {
-          <li key={index}>{list.value}</li>
-        })}
-        <br />
-
         <div className="container">
+          {lists && lists.map((list, index) => {
+            <li key={index}>{list.value}</li>
+          })}
+          
+          <br />
+
           <form className="example" onSubmit={submitHandler}>
             <input type="text" placeholder="입력해 주세요..." onChange={changeHandler} value={value}>
             </input>
