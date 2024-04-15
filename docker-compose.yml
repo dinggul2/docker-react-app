@@ -9,13 +9,15 @@ services:
       - /app/node_modules
       - ./frontend:/app
     stdin_open: true
+
   nginx:
     restart: always
     build:
       context: ./nginx
       dockerfile: Dockerfile
     ports:
-     - "3000:80"
+     - "80:80"
+
   backend:
     build:
       context: ./backend
@@ -24,6 +26,7 @@ services:
     volumes:
       - /app/node_modules
       - ./backend:/app
+  
   mysql:
     build: ./mysql
     restart: unless-stopped
